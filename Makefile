@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv test_app.py
+	pytest -vv --cov-report term-missing --cov=app test_*.py
 
 format:
 	black *.py
